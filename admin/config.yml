@@ -17,12 +17,13 @@ collections:
       - {label: "Formül", name: "formula", widget: "string", required: false}
       - {label: "Açıklama", name: "description", widget: "text", required: false}
 
-  - name: "pages"
-    label: "Sayfalar"
+  - name: "iletisim"
+    label: "İletişim"
     files:
-      - file: "content/pages/iletisim.md"
+      - file: "content/iletisim"
         label: "İletişim Bilgileri"
-        name: "iletisim"
+        create: true
+        slug: "{{slug}}"
         fields:
           - {label: "Adres", name: "address", widget: "text"}
           - {label: "Telefon", name: "phone", widget: "string"}

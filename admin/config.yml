@@ -12,7 +12,7 @@ public_folder: "/assets/images"
 collections:
   # 1. ÜRÜNLER (Çoklu İçerik)
   - name: "urunler"
-    label: "Ürünler (Sınai & Endüstriyel Gazlar)"
+    label: "Ürünler"
     folder: "content/urunler"
     create: true
     slug: "{{slug}}"
@@ -24,7 +24,7 @@ collections:
 
   # 2. HİZMETLER (Çoklu İçerik)
   - name: "hizmetler"
-    label: "Hizmetlerimiz"
+    label: "Hizmetler"
     folder: "content/hizmetler"
     create: true
     slug: "{{slug}}"
@@ -36,8 +36,10 @@ collections:
 
   # 3. İLETİŞİM (Tekil İçerikler)
   - name: "iletisim"
-    label: "İletişim Sayfası"
-    file: "content/pages/iletisim.md"
+    label: "İletişim"
+    folder: "content/iletisim"
+    create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Sayfa Başlığı", name: "title", widget: "string" }
       - { label: "Adres Bilgisi", name: "address", widget: "text" }

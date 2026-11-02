@@ -36,7 +36,7 @@ collections:
 
   # 3. KURUMSAL SAYFALAR (Tekil İçerikler)
   - name: "kurumsal"
-    label: "Kurumsal Sayfalar"
+    label: "Kurumsal"
     files:
       - name: "hakkimizda"
         label: "Hakkımızda Sayfası"
@@ -46,6 +46,7 @@ collections:
           - { label: "Hakkımızda Metni", name: "body", widget: "markdown" }
           - { label: "Tanıtım Görseli", name: "image", widget: "image", required: false }
 
+# 4. KURUMSAL SAYFALAR (Tekil İçerikler)
       - name: "iletisim"
         label: "İletişim Sayfası"
         file: "content/pages/iletisim.md"

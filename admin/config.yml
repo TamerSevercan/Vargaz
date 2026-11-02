@@ -17,13 +17,21 @@ collections:
       - {label: "Formül", name: "formula", widget: "string", required: false}
       - {label: "Açıklama", name: "description", widget: "text", required: false}
 
-  - name: "iletisim"
+  - name: "hizmetler"
+    label: "Hizmetler"
+    folder: "content/hizmetler"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Hizmet Adı", name: "title", widget: "string"}
+      - {label: "Açıklama", name: "description", widget: "text", required: false}
+
+  - name: "pages"
     label: "İletişim"
     files:
-      - file: "content/iletisim"
+      - file: "content/pages/iletisim.md"
         label: "İletişim Bilgileri"
-        create: true
-        slug: "{{slug}}"
+        name: "iletisim"
         fields:
           - {label: "Adres", name: "address", widget: "text"}
           - {label: "Telefon", name: "phone", widget: "string"}

@@ -362,9 +362,9 @@
                 <div class="lg:col-span-5 space-y-6">
                     <div>
                         <h2 class="text-xs font-bold text-[#3b66c4] uppercase tracking-widest mb-2">İletişim Detayları</h2>
-                        <h3 class="text-3xl font-extrabold text-slate-900 mb-4">Vargaz Sanayi ve Gaz Çözümleri</h3>
+                        <h3 class="text-3xl font-extrabold text-slate-900 mb-4">Vargaz Gaz Çözümleri</h3>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Sınai gaz siparişleriniz, teknik sorularınız ve fiyat teklifleriniz için merkezimizle iletişime geçebilirsiniz.
+                            Gaz siparişleriniz, teknik sorularınız ve fiyat teklifleriniz için merkezimizle iletişime geçebilirsiniz.
                         </p>
                     </div>
 
@@ -437,12 +437,12 @@
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Talep Edilen Gaz Türü</label>
                             <select class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#3b66c4] text-sm outline-none">
-                                <option>Oksijen Gazı (O₂)</option>
-                                <option>Argon Gazı (Ar)</option>
-                                <option>Azot / Nitrojen (N₂)</option>
-                                <option>Karbondioksit (CO₂)</option>
-                                <option>Asetilen (C₂H₂)</option>
-                                <option>Helyum Gaz/Sıvı (He)</option>
+                                <option>Yük.Saf. Oksijen Gazı (O₂)</option>
+                                <option>Yük.Saf. Argon Gazı (Ar)</option>
+                                <option>Yük.Saf. Azot/Nitrojen (N₂)</option>
+                                <option>Yük.Saf. Karbondioksit (CO₂)</option>
+                                <option>Yük.Saf. Asetilen (C₂H₂)</option>
+                                <option>Yük.Saf. Helyum Gaz/Sıvı (He)</option>
                                 <option>Balon Gazı (He)</option>
                                 <option>Laboratuvar Gazları</option>
                                 <option>Gıda Gazları</option>
@@ -487,7 +487,7 @@
                 </div>
 
                 <div class="text-xs text-slate-500">
-                    &copy; 2026 VARGAZ Sınai/Endüstriyel  Gazlar. Tüm hakları saklıdır.
+                    &copy; 2026 VARGAZ Gaz San.Tic.Ltd.Şti. Tüm hakları saklıdır.
                 </div>
             </div>
         </div>
@@ -536,9 +536,9 @@
             const iletisimAlani = document.getElementById('iletisim-detay');
             if (iletisimAlani) {
                 iletisimAlani.innerHTML = `
-                    <p><strong>Adres:</strong> ${data.address || 'Belirtilmedi'}</p>
-                    <p><strong>Telefon:</strong> ${data.phone || 'Belirtilmedi'}</p>
-                    <p><strong>E-posta:</strong> ${data.email || 'Belirtilmedi'}</p>
+                    <p><strong>Adres:</strong> ${data.address || 'Ata Mh. 3509. Cd. A8 No : 6 Yenimahalle/ANK'}</p>
+                    <p><strong>Telefon:</strong> ${data.phone || '05309784197'}</p>
+                    <p><strong>E-posta:</strong> ${data.email || 'info@vargaz.com.tr'}</p>
                 `;
             }
         })

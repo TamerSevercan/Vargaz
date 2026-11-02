@@ -1,7 +1,7 @@
 # GitHub Depo Bilgileriniz
 backend:
   name: github
-  repo: KULLANICI_ADINIZ/REPO_ADINIZ # Örn: vargaz/vargaz-website
+  repo: TamerSevercan/Vargaz
   branch: main # Ana dalınız 'master' ise master yazın
 
 # Yönetim Paneli Ayarları

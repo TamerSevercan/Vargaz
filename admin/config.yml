@@ -2,17 +2,17 @@
 backend:
   name: github
   repo: TamerSevercan/Vargaz
-  branch: main # Ana dalınız 'master' ise master yazın
+  branch: main
 
 # Yönetim Paneli Ayarları
-media_folder: "assets/images" # Yüklenen resimlerin kaydedileceği klasör
+media_folder: "assets/images"
 public_folder: "/assets/images"
 
 # Sitede Yönetmek İstediğiniz Bölümler (Koleksiyonlar)
 collections:
   - name: "urunler"
     label: "Sınai & Endüstriyel Gazlar"
-    folder: "content/urunler" # Ürün dosyalarının duracağı yer
+    folder: "content/urunler"
     create: true
     slug: "{{slug}}"
     fields:
@@ -20,3 +20,16 @@ collections:
       - { label: "Formül / Kısa Bilgi", name: "formula", widget: "string", required: false }
       - { label: "Açıklama Metni", name: "description", widget: "text" }
       - { label: "İkon / Görsel", name: "image", widget: "image", required: false }
+
+  - name: "sayfalar"
+    label: "Kurumsal Sayfalar"
+    files:
+      - name: "iletisim"
+        label: "İletişim Sayfası"
+        file: "content/pages/iletisim.md"
+        fields:
+          - { label: "Sayfa Başlığı", name: "title", widget: "string" }
+          - { label: "Adres Bilgisi", name: "address", widget: "text" }
+          - { label: "Telefon Numarası", name: "phone", widget: "string" }
+          - { label: "E-posta Adresi", name: "email", widget: "string" }
+          - { label: "Açıklama / Notlar", name: "body", widget: "markdown" }

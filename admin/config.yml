@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: TamerSevercan/Vargaz
+  branch: main
+
+media_folder: "content/images"
+public_folder: "/content/images"
+
+collections:
+  - name: "urunler"
+    label: "Ürünler"
+    folder: "content/urunler"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Başlık", name: "title", widget: "string"}
+      - {label: "Formül", name: "formula", widget: "string", required: false}
+      - {label: "Açıklama", name: "description", widget: "text", required: false}
+
+  - name: "pages"
+    label: "Sayfalar"
+    files:
+      - file: "content/pages/iletisim.md"
+        label: "İletişim Bilgileri"
+        name: "iletisim"
+        fields:
+          - {label: "Adres", name: "address", widget: "text"}
+          - {label: "Telefon", name: "phone", widget: "string"}
+          - {label: "E-posta", name: "email", widget: "string"}

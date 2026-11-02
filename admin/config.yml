@@ -10,8 +10,9 @@ public_folder: "/assets/images"
 
 # Sitede Yönetmek İstediğiniz Bölümler (Koleksiyonlar)
 collections:
+  # 1. ÜRÜNLER (Çoklu İçerik)
   - name: "urunler"
-    label: "Sınai & Endüstriyel Gazlar"
+    label: "Ürünler (Sınai & Endüstriyel Gazlar)"
     folder: "content/urunler"
     create: true
     slug: "{{slug}}"
@@ -19,11 +20,32 @@ collections:
       - { label: "Gaz Adı (Başlık)", name: "title", widget: "string" }
       - { label: "Formül / Kısa Bilgi", name: "formula", widget: "string", required: false }
       - { label: "Açıklama Metni", name: "description", widget: "text" }
-      - { label: "İkon / Görsel", name: "image", widget: "image", required: false }
+      - { label: "Görsel", name: "image", widget: "image", required: false }
 
-  - name: "sayfalar"
+  # 2. HİZMETLER (Çoklu İçerik)
+  - name: "hizmetler"
+    label: "Hizmetlerimiz"
+    folder: "content/hizmetler"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Hizmet Adı", name: "title", widget: "string" }
+      - { label: "Kısa Özet", name: "summary", widget: "string" }
+      - { label: "Detaylı Açıklama", name: "body", widget: "markdown" }
+      - { label: "Hizmet Görseli", name: "image", widget: "image", required: false }
+
+  # 3. KURUMSAL SAYFALAR (Tekil İçerikler)
+  - name: "kurumsal"
     label: "Kurumsal Sayfalar"
     files:
+      - name: "hakkimizda"
+        label: "Hakkımızda Sayfası"
+        file: "content/pages/hakkimizda.md"
+        fields:
+          - { label: "Sayfa Başlığı", name: "title", widget: "string" }
+          - { label: "Hakkımızda Metni", name: "body", widget: "markdown" }
+          - { label: "Tanıtım Görseli", name: "image", widget: "image", required: false }
+
       - name: "iletisim"
         label: "İletişim Sayfası"
         file: "content/pages/iletisim.md"
@@ -32,4 +54,5 @@ collections:
           - { label: "Adres Bilgisi", name: "address", widget: "text" }
           - { label: "Telefon Numarası", name: "phone", widget: "string" }
           - { label: "E-posta Adresi", name: "email", widget: "string" }
-          - { label: "Açıklama / Notlar", name: "body", widget: "markdown" }
+          - { label: "Çalışma Saatleri", name: "hours", widget: "string", required: false }
+          - { label: "Harita / Ek Bilgiler", name: "body", widget: "markdown", required: false }

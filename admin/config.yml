@@ -1,0 +1,22 @@
+# GitHub Depo Bilgileriniz
+backend:
+  name: github
+  repo: KULLANICI_ADINIZ/REPO_ADINIZ # Örn: vargaz/vargaz-website
+  branch: main # Ana dalınız 'master' ise master yazın
+
+# Yönetim Paneli Ayarları
+media_folder: "assets/images" # Yüklenen resimlerin kaydedileceği klasör
+public_folder: "/assets/images"
+
+# Sitede Yönetmek İstediğiniz Bölümler (Koleksiyonlar)
+collections:
+  - name: "urunler"
+    label: "Sınai & Endüstriyel Gazlar"
+    folder: "content/urunler" # Ürün dosyalarının duracağı yer
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Gaz Adı (Başlık)", name: "title", widget: "string" }
+      - { label: "Formül / Kısa Bilgi", name: "formula", widget: "string", required: false }
+      - { label: "Açıklama Metni", name: "description", widget: "text" }
+      - { label: "İkon / Görsel", name: "image", widget: "image", required: false }

@@ -37,6 +37,18 @@
         .accent-bar {
             background: linear-gradient(90deg, #000000 0%, #dc2626 50%, #eab308 100%);
         }
+        /* Özel Dropdown Stilleri */
+        .dropdown-container:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.25s ease-in-out;
+        }
     </style>
 </head>
 <body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
@@ -44,32 +56,73 @@
     <!-- TOP COLOR STRIPE -->
     <div class="h-1.5 w-full accent-bar fixed top-0 left-0 z-50"></div>
 
-    <!-- HEADER / NAVIGATION (LIGHT BACKGROUND FOR HIGH LOGO CONTRAST) -->
+    <!-- HEADER / NAVIGATION -->
     <header class="fixed top-1.5 left-0 w-full bg-slate-50/95 backdrop-blur-md z-40 border-b border-slate-200 shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 
-                <!-- SVG Vector Logo Matching User's Image -->
+                <!-- SVG Vector Logo -->
                 <a href="#" class="flex items-center group py-2">
                     <svg class="h-12 w-auto" viewBox="0 0 380 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Curved Lines (Black, Red, Yellow) -->
                         <path d="M 25 55 Q 180 5 360 40" stroke="#1e1e1e" stroke-width="5" stroke-linecap="round"/>
                         <path d="M 24 85 Q 190 40 360 88" stroke="#dc2626" stroke-width="6" stroke-linecap="round"/>
                         <path d="M 23 115 Q 190 85 350 120" stroke="#facc15" stroke-width="6" stroke-linecap="round"/>
-                        
-                        <!-- V Symbol -->
                         <path d="M 20 95 L 75 145 L 180 25 L 145 25 L 70 115 L 45 95 Z" fill="#3b66c4"/>
-                        
-                        <!-- ARGAZ Text -->
                         <text x="120" y="140" font-family="'Inter', sans-serif" font-weight="900" font-style="italic" font-size="64" fill="#3b66c4" letter-spacing="2">ARGAZ</text>
                         <line x1="120" y1="148" x2="350" y2="148" stroke="#3b66c4" stroke-width="4"/>
                     </svg>
                 </a>
 
-                <!-- Desktop Nav (Dark Text on Light Header) -->
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#urunler" class="text-sm font-semibold text-slate-700 hover:text-[#3b66c4] transition-colors">Gazlar</a>
-                    <a href="#hizmetler" class="text-sm font-semibold text-slate-700 hover:text-[#3b66c4] transition-colors">Ekipmanlar</a>
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    
+                    <!-- GAZLAR DROPDOWN -->
+                    <div class="relative dropdown-container py-2">
+                        <a href="#urunler" class="flex items-center text-sm font-semibold text-slate-700 hover:text-[#3b66c4] transition-colors">
+                            Gazlar <i class="fa-solid fa-chevron-down text-[10px] ml-1.5"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full left-0 w-80 bg-white border border-slate-200 rounded-xl shadow-xl py-3 px-2 z-50">
+                            <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1">Endüstriyel & Standart Gazlar</div>
+                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Oksijen (O₂) & Argon (Ar)</a>
+                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Koruyucu Karışım Gazları</a>
+                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Azot / Nitrojen (N₂) & Karbondioksit (CO₂)</a>
+                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Asetilen (C₂H₂)</a>
+                            
+                            <div class="border-t border-slate-100 my-2"></div>
+                            
+                            <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1">Özel, Analitik & Diğer Gazlar</div>
+                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Helyum (He) & Balon Gazı</a>
+                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Gıda Gazları ve Ambalaj Karışımları</a>
+                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Laboratuvar Gazları (Ultra Saflık)</a>
+                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Emisyon Ölçüm Gazları (ppm/ppb)</a>
+                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Sertifikalı Özel Gaz Karışımları</a>
+                        </div>
+                    </div>
+
+                    <!-- EKİPMANLAR DROPDOWN -->
+                    <div class="relative dropdown-container py-2">
+                        <a href="#hizmetler" class="flex items-center text-sm font-semibold text-slate-700 hover:text-[#3b66c4] transition-colors">
+                            Ekipmanlar <i class="fa-solid fa-chevron-down text-[10px] ml-1.5"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full left-0 w-72 bg-white border border-slate-200 rounded-xl shadow-xl py-3 px-2 z-50">
+                            <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1">Basınç & Akış Kontrolü</div>
+                            <a href="#hizmetler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Basınç Düşürücüler & Regülatörler</a>
+                            <a href="#hizmetler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Manometreler & Debi Metreler</a>
+                            
+                            <div class="border-t border-slate-100 my-2"></div>
+                            
+                            <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1">Tesisat & Güvenlik</div>
+                            <a href="#hizmetler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Gaz Santralleri (Manifold Sistemleri)</a>
+                            <a href="#hizmetler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Alev Geri Tepme Emniyet Valfleri</a>
+                            <a href="#hizmetler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Yüksek Basınç Hortumları & Bağlantılar</a>
+                            
+                            <div class="border-t border-slate-100 my-2"></div>
+                            
+                            <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1">Tüp & Depolama</div>
+                            <a href="#hizmetler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Gaz Tüpleri & Tüp Demetleri (MCP)</a>
+                        </div>
+                    </div>
+
                     <a href="#iletisim" class="text-sm font-semibold text-slate-700 hover:text-[#3b66c4] transition-colors">İletişim</a>
                 </nav>
 
@@ -92,11 +145,21 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Dropdown (Light Theme) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-50 border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
-            <a href="#urunler" class="block text-slate-800 hover:text-[#3b66c4] font-semibold py-2">Gazlar</a>
-            <a href="#hizmetler" class="block text-slate-800 hover:text-[#3b66c4] font-semibold py-2">Ekipmanlar</a>
-            <a href="#iletisim" class="block text-slate-800 hover:text-[#3b66c4] font-semibold py-2">İletişim</a>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-50 border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 max-h-[80vh] overflow-y-auto">
+            <div class="py-1 font-bold text-xs uppercase text-slate-400">Gazlar</div>
+            <a href="#urunler" class="block pl-3 text-slate-700 hover:text-[#3b66c4] text-sm py-1">Oksijen, Argon & Azot</a>
+            <a href="#urunler" class="block pl-3 text-slate-700 hover:text-[#3b66c4] text-sm py-1">Laboratuvar & Emisyon Gazları</a>
+            <a href="#urunler" class="block pl-3 text-slate-700 hover:text-[#3b66c4] text-sm py-1">Gıda & Özel Karışım Gazları</a>
+            
+            <div class="py-1 font-bold text-xs uppercase text-slate-400 mt-2">Ekipmanlar</div>
+            <a href="#hizmetler" class="block pl-3 text-slate-700 hover:text-[#3b66c4] text-sm py-1">Regülatörler & Basınç Kontrol</a>
+            <a href="#hizmetler" class="block pl-3 text-slate-700 hover:text-[#3b66c4] text-sm py-1">Gaz Santralleri & Manifold</a>
+            
+            <div class="pt-2">
+                <a href="#iletisim" class="block text-slate-800 hover:text-[#3b66c4] font-semibold py-2">İletişim</a>
+            </div>
+            
             <div class="pt-2 flex flex-col space-y-2">
                 <a href="https://wa.me/905309784197" target="_blank" class="text-center w-full px-4 py-2.5 rounded-lg font-semibold text-sm text-white bg-emerald-600">
                     <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp İletişim
@@ -119,6 +182,7 @@
                 </h1>
                 <p class="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
                     Yüksek Saflıkta Gazlar, Özel Karışımları Gazları, Kalibrasyon Gazları, Laboratuvar Gazları, Gıda Gazları ve Ekipmanlar ile ilgili ihtiyaçlarınız için hizmetinize hazırız.
+                </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#teklif" class="inline-flex items-center justify-center px-7 py-3.5 rounded-xl font-bold text-white bg-[#3b66c4] hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/25">
                         Hızlı Teklif Alın
@@ -293,12 +357,6 @@
                     <h4 class="text-lg font-bold text-slate-900 mb-2">Emisyon Gazları</h4>
                     <p class="text-slate-600 text-xs leading-relaxed mb-4">
                         Analiz cihazları için ppm/ppb hassasiyetli çok bileşenli özel gazlar.
-                        • Kükürt Dioksit (SO₂)
-                        • Azot Oksitler (NO, NOx)
-                        • Karbon Monoksit (CO)
-                        • Karbon Dioksit (CO₂)
-                        • Oksijen (O₂)
-                        • Hidrokarbonlar / Propan (C₃H₈) karışımları v.b.
                     </p>
                     <span class="inline-block px-2.5 py-1 rounded bg-purple-50 text-[11px] font-semibold text-purple-700">Ultra/Yüksek Saflık</span>
                 </div>
@@ -377,31 +435,26 @@
                     </div>
 
                     <div class="space-y-4">
-                        <!-- Adres -->
                         <div>
                             <div class="text-xs font-bold uppercase text-slate-400">Adres</div>
                             <div class="text-sm font-semibold text-slate-800">Ata Mh. 3509 Cd. A8 Blok No:6  06105-Yenimahalle/Ankara, Türkiye</div>
                         </div>
 
-                        <!-- Telefon -->
                         <div>
                             <div class="text-xs font-bold uppercase text-slate-400">Telefon</div>
                             <div class="text-sm font-semibold text-slate-800">0530 978 41 97</div>
                         </div>
 
-                        <!-- E-posta -->
                         <div>
                             <div class="text-xs font-bold uppercase text-slate-400">E-posta</div>
                             <a href="mailto:info@vargaz.com.tr" class="text-sm font-semibold text-[#3b66c4] hover:underline">info@vargaz.com.tr</a>
                         </div>
 
-                        <!-- Web Sitemiz -->
                         <div>
                             <div class="text-xs font-bold uppercase text-slate-400">Web Sitemiz</div>
                             <div class="text-sm font-semibold text-slate-800">www.vargaz.com.tr</div>
                         </div>
 
-                        <!-- Map Placeholder / Embed -->
                         <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm h-48 bg-slate-200 relative mt-4">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195884.30043003027!2d32.62268153400587!3d39.90355569429482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d347d520732db1%3A0xbdc57b0c0842b8d!2sAnkara!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" class="w-full h-full border-0" allowfullscreen="" loading="lazy"></iframe>
                         </div>
@@ -413,7 +466,7 @@
                     <h3 class="text-2xl font-bold text-slate-900 mb-2">Hızlı Teklif & Sipariş Formu</h3>
                     <p class="text-slate-600 text-sm mb-6">Formu doldurarak saniyeler içinde gaz talebinizi iletebilirsiniz.</p>
 
-                   <form id="contact-form" action="https://formspree.io/f/mvkkveyy" method="POST" class="space-y-4">
+                    <form id="contact-form" action="https://formspree.io/f/mvkkveyy" method="POST" class="space-y-4">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Adınız Soyadınız *</label>
@@ -473,35 +526,20 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                
-                <!-- Footer Logo SVG -->
-                <div class="flex items-center space-x-3">
-                    <svg class="h-8 w-auto" viewBox="0 0 380 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M 25 55 Q 180 5 360 40" stroke="#1e1e1e" stroke-width="5" stroke-linecap="round"/>
-                        <path d="M 24 85 Q 190 40 360 88" stroke="#dc2626" stroke-width="6" stroke-linecap="round"/>
-                        <path d="M 23 115 Q 190 85 350 120" stroke="#facc15" stroke-width="6" stroke-linecap="round"/>
-                        <path d="M 20 95 L 75 145 L 180 25 L 145 25 L 70 115 L 45 95 Z" fill="#3b66c4"/>
-                        <text x="120" y="140" font-family="'Inter', sans-serif" font-weight="900" font-style="italic" font-size="64" fill="#3b66c4" letter-spacing="2">ARGAZ</text>
-                        <line x1="120" y1="148" x2="350" y2="148" stroke="#3b66c4" stroke-width="4"/>
-                    </svg>
-                </div>
-                <div class="text-xs text-slate-500 text-center md:text-right">
-                    © 2026 VARGAZ Endüstriyel Gazlar. Tüm Hakları Saklıdır.
-                </div>
-            </div>
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between text-xs">
+            <p>&copy; 2026 VARGAZ Analiz Gazları ve Özel Gaz Çözümleri. Tüm hakları saklıdır.</p>
+            <p class="mt-4 md:mt-0">Tasarım & Altyapı: VARGAZ Dijital Ekibi</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu -->
+    <!-- MOBILE MENU SCRIPT -->
     <script>
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
         });
     </script>
 </body>

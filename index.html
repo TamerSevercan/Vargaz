@@ -37,13 +37,13 @@
         .accent-bar {
             background: linear-gradient(90deg, #000000 0%, #dc2626 50%, #eab308 100%);
         }
-        /* Özel Dropdown Stilleri */
-        .dropdown-container:hover .dropdown-menu {
+        /* Gelişmiş Mega Menü Stilleri */
+        .dropdown-container:hover .mega-menu {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
-        .dropdown-menu {
+        .mega-menu {
             opacity: 0;
             visibility: hidden;
             transform: translateY(10px);
@@ -76,50 +76,137 @@
                 <!-- Desktop Nav -->
                 <nav class="hidden md:flex items-center space-x-6">
                     
-                    <!-- GAZLAR DROPDOWN -->
+                    <!-- GAZLAR MEGA MENÜ (Açıklama, İkon ve Belge Alanı İle) -->
                     <div class="relative dropdown-container py-2">
                         <a href="#urunler" class="flex items-center text-sm font-semibold text-slate-700 hover:text-[#3b66c4] transition-colors">
                             Gazlar <i class="fa-solid fa-chevron-down text-[10px] ml-1.5"></i>
                         </a>
-                        <div class="dropdown-menu absolute top-full left-0 w-80 bg-white border border-slate-200 rounded-xl shadow-xl py-3 px-2 z-50">
-                            <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1">Endüstriyel & Standart Gazlar</div>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Oksijen (O₂) & Argon (Ar)</a>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Koruyucu Karışım Gazları</a>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Azot / Nitrojen (N₂) & Karbondioksit (CO₂)</a>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Asetilen (C₂H₂)</a>
+                        <div class="mega-menu absolute top-full -left-20 w-[720px] bg-white border border-slate-200 rounded-2xl shadow-2xl p-6 grid grid-cols-2 gap-6 z-50">
                             
-                            <div class="border-t border-slate-100 my-2"></div>
-                            
-                            <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1">Özel, Analitik & Diğer Gazlar</div>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Helyum (He) & Balon Gazı</a>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Gıda Gazları ve Ambalaj Karışımları</a>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Laboratuvar Gazları (Ultra Saflık)</a>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Emisyon Ölçüm Gazları (ppm/ppb)</a>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Sertifikalı Özel Gaz Karışımları</a>
+                            <!-- Sol Kolon: Endüstriyel Gazlar -->
+                            <div>
+                                <div class="text-xs font-bold text-[#3b66c4] uppercase tracking-wider mb-3 pb-2 border-b border-slate-100 flex items-center justify-between">
+                                    <span>Endüstriyel & Standart Gazlar</span>
+                                </div>
+                                <div class="space-y-3">
+                                    <!-- Ürün 1 -->
+                                    <a href="#urunler" class="flex items-start space-x-3 p-2 rounded-xl hover:bg-slate-50 transition-colors group">
+                                        <div class="w-9 h-9 rounded-lg bg-blue-50 text-[#3b66c4] flex items-center justify-center shrink-0 group-hover:bg-[#3b66c4] group-hover:text-white transition-colors">
+                                            <i class="fa-solid fa-wind text-sm"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="text-xs font-bold text-slate-900 group-hover:text-[#3b66c4]">Oksijen (O₂) & Argon (Ar)</div>
+                                            <div class="text-[11px] text-slate-500 leading-tight mt-0.5">Kesim, kaynak ve metalurji uygulamaları.</div>
+                                            <span class="text-[10px] text-blue-600 font-semibold hover:underline mt-1 inline-block"><i class="fa-solid fa-file-pdf mr-1"></i> MSDS / Föy İndir</span>
+                                        </div>
+                                    </a>
+                                    <!-- Ürün 2 -->
+                                    <a href="#urunler" class="flex items-start space-x-3 p-2 rounded-xl hover:bg-slate-50 transition-colors group">
+                                        <div class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                                            <i class="fa-solid fa-snowflake text-sm"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="text-xs font-bold text-slate-900 group-hover:text-indigo-600">Azot (N₂) & CO₂</div>
+                                            <div class="text-[11px] text-slate-500 leading-tight mt-0.5">Lazer kesim, gıda ve yangın söndürme.</div>
+                                            <span class="text-[10px] text-blue-600 font-semibold hover:underline mt-1 inline-block"><i class="fa-solid fa-file-pdf mr-1"></i> MSDS / Föy İndir</span>
+                                        </div>
+                                    </a>
+                                    <!-- Ürün 3 -->
+                                    <a href="#urunler" class="flex items-start space-x-3 p-2 rounded-xl hover:bg-slate-50 transition-colors group">
+                                        <div class="w-9 h-9 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center shrink-0 group-hover:bg-rose-600 group-hover:text-white transition-colors">
+                                            <i class="fa-solid fa-fire-burner text-sm"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="text-xs font-bold text-slate-900 group-hover:text-rose-600">Asetilen (C₂H₂)</div>
+                                            <div class="text-[11px] text-slate-500 leading-tight mt-0.5">Yüksek sıcaklıkta kaynak ve tavlama.</div>
+                                            <span class="text-[10px] text-blue-600 font-semibold hover:underline mt-1 inline-block"><i class="fa-solid fa-file-pdf mr-1"></i> MSDS / Föy İndir</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Sağ Kolon: Özel & Analitik Gazlar -->
+                            <div>
+                                <div class="text-xs font-bold text-purple-600 uppercase tracking-wider mb-3 pb-2 border-b border-slate-100 flex items-center justify-between">
+                                    <span>Özel, Laboratuvar & Analitik Gazlar</span>
+                                </div>
+                                <div class="space-y-3">
+                                    <!-- Ürün 4 -->
+                                    <a href="#urunler" class="flex items-start space-x-3 p-2 rounded-xl hover:bg-slate-50 transition-colors group">
+                                        <div class="w-9 h-9 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center shrink-0 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                                            <i class="fa-solid fa-flask text-sm"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="text-xs font-bold text-slate-900 group-hover:text-purple-600">Laboratuvar & Emisyon Gazları</div>
+                                            <div class="text-[11px] text-slate-500 leading-tight mt-0.5">Kromatografi ve hassas ölçüm cihazları için.</div>
+                                            <span class="text-[10px] text-blue-600 font-semibold hover:underline mt-1 inline-block"><i class="fa-solid fa-file-pdf mr-1"></i> Sertifika / Föy</span>
+                                        </div>
+                                    </a>
+                                    <!-- Ürün 5 -->
+                                    <a href="#urunler" class="flex items-start space-x-3 p-2 rounded-xl hover:bg-slate-50 transition-colors group">
+                                        <div class="w-9 h-9 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                                            <i class="fa-solid fa-lightbulb text-sm"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="text-xs font-bold text-slate-900 group-hover:text-amber-600">Helyum (He) & Balon Gazı</div>
+                                            <div class="text-[11px] text-slate-500 leading-tight mt-0.5">Kaçak testleri ve organizasyonlar için.</div>
+                                            <span class="text-[10px] text-blue-600 font-semibold hover:underline mt-1 inline-block"><i class="fa-solid fa-file-pdf mr-1"></i> MSDS / Föy İndir</span>
+                                        </div>
+                                    </a>
+                                    <!-- Ürün 6 -->
+                                    <a href="#urunler" class="flex items-start space-x-3 p-2 rounded-xl hover:bg-slate-50 transition-colors group">
+                                        <div class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                                            <i class="fa-solid fa-vial text-sm"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="text-xs font-bold text-slate-900 group-hover:text-emerald-600">Özel Gaz Karışımları</div>
+                                            <div class="text-[11px] text-slate-500 leading-tight mt-0.5">Prosesinize özel sertifikalı karışımlar.</div>
+                                            <span class="text-[10px] text-blue-600 font-semibold hover:underline mt-1 inline-block"><i class="fa-solid fa-file-pdf mr-1"></i> Teknik Belge</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
-                    <!-- EKİPMANLAR DROPDOWN -->
+                    <!-- EKİPMANLAR MEGA MENÜ -->
                     <div class="relative dropdown-container py-2">
                         <a href="#hizmetler" class="flex items-center text-sm font-semibold text-slate-700 hover:text-[#3b66c4] transition-colors">
                             Ekipmanlar <i class="fa-solid fa-chevron-down text-[10px] ml-1.5"></i>
                         </a>
-                        <div class="dropdown-menu absolute top-full left-0 w-72 bg-white border border-slate-200 rounded-xl shadow-xl py-3 px-2 z-50">
-                            <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1">Basınç & Akış Kontrolü</div>
-                            <a href="#hizmetler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Basınç Düşürücüler & Regülatörler</a>
-                            <a href="#hizmetler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Manometreler & Debi Metreler</a>
+                        <div class="mega-menu absolute top-full left-0 w-80 bg-white border border-slate-200 rounded-2xl shadow-2xl p-4 z-50 space-y-3">
+                            <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-2">Basınç & Güvenlik Donanımları</div>
                             
-                            <div class="border-t border-slate-100 my-2"></div>
-                            
-                            <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1">Tesisat & Güvenlik</div>
-                            <a href="#hizmetler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Gaz Santralleri (Manifold Sistemleri)</a>
-                            <a href="#hizmetler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Alev Geri Tepme Emniyet Valfleri</a>
-                            <a href="#hizmetler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Yüksek Basınç Hortumları & Bağlantılar</a>
-                            
-                            <div class="border-t border-slate-100 my-2"></div>
-                            
-                            <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1">Tüp & Depolama</div>
-                            <a href="#hizmetler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Gaz Tüpleri & Tüp Demetleri (MCP)</a>
+                            <a href="#hizmetler" class="flex items-start space-x-3 p-2 rounded-xl hover:bg-slate-50 transition-colors group">
+                                <div class="w-8 h-8 rounded-lg bg-blue-50 text-[#3b66c4] flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-gauge text-xs"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-xs font-bold text-slate-900 group-hover:text-[#3b66c4]">Regülatörler & Manometreler</div>
+                                    <div class="text-[11px] text-slate-500">Yüksek basınç düşürücü vanalar.</div>
+                                </div>
+                            </a>
+
+                            <a href="#hizmetler" class="flex items-start space-x-3 p-2 rounded-xl hover:bg-slate-50 transition-colors group">
+                                <div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-network-wired text-xs"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-xs font-bold text-slate-900 group-hover:text-amber-600">Gaz Santralleri & Manifold</div>
+                                    <div class="text-[11px] text-slate-500">Çoklu tüp bağlantı sistemleri.</div>
+                                </div>
+                            </a>
+
+                            <a href="#hizmetler" class="flex items-start space-x-3 p-2 rounded-xl hover:bg-slate-50 transition-colors group">
+                                <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-shield-cat text-xs"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-xs font-bold text-slate-900 group-hover:text-rose-600">Emniyet Valfleri & Hortumlar</div>
+                                    <div class="text-[11px] text-slate-500">Alev geri tepme ve güvenlik donanımı.</div>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
@@ -150,11 +237,9 @@
             <div class="py-1 font-bold text-xs uppercase text-slate-400">Gazlar</div>
             <a href="#urunler" class="block pl-3 text-slate-700 hover:text-[#3b66c4] text-sm py-1">Oksijen, Argon & Azot</a>
             <a href="#urunler" class="block pl-3 text-slate-700 hover:text-[#3b66c4] text-sm py-1">Laboratuvar & Emisyon Gazları</a>
-            <a href="#urunler" class="block pl-3 text-slate-700 hover:text-[#3b66c4] text-sm py-1">Gıda & Özel Karışım Gazları</a>
             
             <div class="py-1 font-bold text-xs uppercase text-slate-400 mt-2">Ekipmanlar</div>
             <a href="#hizmetler" class="block pl-3 text-slate-700 hover:text-[#3b66c4] text-sm py-1">Regülatörler & Basınç Kontrol</a>
-            <a href="#hizmetler" class="block pl-3 text-slate-700 hover:text-[#3b66c4] text-sm py-1">Gaz Santralleri & Manifold</a>
             
             <div class="pt-2">
                 <a href="#iletisim" class="block text-slate-800 hover:text-[#3b66c4] font-semibold py-2">İletişim</a>
@@ -253,18 +338,6 @@
                     <span class="inline-block px-2.5 py-1 rounded bg-cyan-50 text-[11px] font-semibold text-cyan-700">%99.999 Yüksek Saflık</span>
                 </div>
 
-                <!-- Koruyucu Karışım Gazları -->
-                <div class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-[#3b66c4] hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Koruyucu Karışım Gazları</h4>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                       TIG/MIG kaynak proseslerinde koruyucu karışım gazları olarak mükemmel kaynak mukavemeti.
-                    </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-cyan-50 text-[11px] font-semibold text-cyan-700">Endüstriyel</span>
-                </div>
-
                 <!-- Azot -->
                 <div class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-[#3b66c4] hover:shadow-xl transition-all duration-300">
                     <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
@@ -287,90 +360,6 @@
                         Gazaltı kaynakları, gıda ikram ve yangın söndürme sistemlerine uygun CO₂ tedariki.
                     </p>
                     <span class="inline-block px-2.5 py-1 rounded bg-emerald-50 text-[11px] font-semibold text-emerald-700">Gıda & Sınai Tipi</span>
-                </div>
-
-                <!-- Asetilen -->
-                <div class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-[#3b66c4] hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-fire-burner"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Asetilen (C₂H₂)</h4>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                        Yüksek alev sıcaklığı gerektiren kaynak, kesme ve tavlama işleri için yanıcı gaz.
-                    </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-rose-50 text-[11px] font-semibold text-rose-700">Emniyetli Dolum</span>
-                </div>
-
-                <!-- Helyum -->
-                <div class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-[#3b66c4] hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-lightbulb"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Helyum (He)</h4>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                        Kaçak testleri, hassas laboratuvar analizleri ve endüstriyel soğutma süreçleri.
-                    </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-amber-50 text-[11px] font-semibold text-amber-700">Yüksek Saflık</span>
-                </div>
-
-                <!-- Balon Gazı -->
-                <div class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-[#3b66c4] hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-lightbulb"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Balon Gazı</h4>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                        Doğum günü, nişan, düğün ve muhtelif parti organizasyonlarında balon uçurmak için helyum gazı.
-                    </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-amber-50 text-[11px] font-semibold text-amber-700">Eğlence</span>
-                </div>
-
-                <!-- Gıda Gazları -->
-                <div class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-[#3b66c4] hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-lightbulb"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Gıda Gazları</h4>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                       Gıda sektöründe ambalajlı ürünleri korumak ve raf ömür sürelerini uzatmak için gıda gazı ve karışımları.
-                    </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-amber-50 text-[11px] font-semibold text-amber-700">Özel Karışım</span>
-                </div>
-
-                <!-- Laboratuvar Gazları -->
-                <div class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-[#3b66c4] hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-flask"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Laboratuvar Gazları</h4>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                        Ar-Ge ve Analiz Laboratuvarlarında başta kromatografi, spektrometri ve diğer hassas ölçüm cihazları için ultra/yüksek hassasiyetli gaz ve özel karışım gazları.
-                    </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-purple-50 text-[11px] font-semibold text-purple-700">Ultra/Yüksek Saflık</span>
-                </div>
-
-                <!-- Emisyon Gazları -->
-                <div class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-[#3b66c4] hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-flask"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Emisyon Gazları</h4>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                        Analiz cihazları için ppm/ppb hassasiyetli çok bileşenli özel gazlar.
-                    </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-purple-50 text-[11px] font-semibold text-purple-700">Ultra/Yüksek Saflık</span>
-                </div>
-
-                <!-- Özel Karışım Gazları -->
-                <div class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-[#3b66c4] hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-[#3b66c4] flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-vial"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Özel Gaz Karışımları</h4>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                        Prosesinize özel oranlarda hazırlanan sertifikalı ve homojen gaz karışımları.
-                    </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-blue-50 text-[11px] font-semibold text-[#3b66c4]">Sertifikalı Karışım</span>
                 </div>
             </div>
         </div>

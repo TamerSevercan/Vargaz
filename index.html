@@ -76,26 +76,58 @@
                 <!-- Desktop Nav -->
                 <nav class="hidden md:flex items-center space-x-6">
                     
-                    <!-- GAZLAR DROPDOWN -->
+                    <!-- GAZLAR DROPDOWN (MSDS Dosya Bağlantıları ile Güncellendi) -->
                     <div class="relative dropdown-container py-2">
                         <a href="#urunler" class="flex items-center text-sm font-semibold text-slate-700 hover:text-[#3b66c4] transition-colors">
                             Gazlar <i class="fa-solid fa-chevron-down text-[10px] ml-1.5"></i>
                         </a>
-                        <div class="dropdown-menu absolute top-full left-0 w-80 bg-white border border-slate-200 rounded-xl shadow-xl py-3 px-2 z-50">
+                        <div class="dropdown-menu absolute top-full left-0 w-96 bg-white border border-slate-200 rounded-xl shadow-xl py-3 px-2 z-50">
                             <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1">Endüstriyel & Standart Gazlar</div>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Oksijen (O₂) & Argon (Ar)</a>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Koruyucu Karışım Gazları</a>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Azot / Nitrojen (N₂) & Karbondioksit (CO₂)</a>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Asetilen (C₂H₂)</a>
+                            
+                            <div class="flex items-center justify-between px-3 py-1.5 rounded-lg hover:bg-blue-50 text-xs font-medium text-slate-700">
+                                <a href="#urunler" class="flex-1 hover:text-[#3b66c4]">Oksijen (O₂)</a>
+                                <a href="msds/oksijen.pdf" target="_blank" title="MSDS İndir" class="text-rose-500 hover:text-rose-700 px-2 py-0.5 bg-rose-50 rounded text-[10px] font-bold flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
+                            </div>
+                            <div class="flex items-center justify-between px-3 py-1.5 rounded-lg hover:bg-blue-50 text-xs font-medium text-slate-700">
+                                <a href="#urunler" class="flex-1 hover:text-[#3b66c4]">Argon (Ar)</a>
+                                <a href="msds/argon.pdf" target="_blank" title="MSDS İndir" class="text-rose-500 hover:text-rose-700 px-2 py-0.5 bg-rose-50 rounded text-[10px] font-bold flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
+                            </div>
+                            <div class="flex items-center justify-between px-3 py-1.5 rounded-lg hover:bg-blue-50 text-xs font-medium text-slate-700">
+                                <a href="#urunler" class="flex-1 hover:text-[#3b66c4]">Koruyucu Karışım Gazları</a>
+                                <a href="msds/koruyucu-karisim.pdf" target="_blank" title="MSDS İndir" class="text-rose-500 hover:text-rose-700 px-2 py-0.5 bg-rose-50 rounded text-[10px] font-bold flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
+                            </div>
+                            <div class="flex items-center justify-between px-3 py-1.5 rounded-lg hover:bg-blue-50 text-xs font-medium text-slate-700">
+                                <a href="#urunler" class="flex-1 hover:text-[#3b66c4]">Azot / Nitrojen (N₂) & Karbondioksit (CO₂)</a>
+                                <a href="msds/azot-co2.pdf" target="_blank" title="MSDS İndir" class="text-rose-500 hover:text-rose-700 px-2 py-0.5 bg-rose-50 rounded text-[10px] font-bold flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
+                            </div>
+                            <div class="flex items-center justify-between px-3 py-1.5 rounded-lg hover:bg-blue-50 text-xs font-medium text-slate-700">
+                                <a href="#urunler" class="flex-1 hover:text-[#3b66c4]">Asetilen (C₂H₂)</a>
+                                <a href="msds/asetilen.pdf" target="_blank" title="MSDS İndir" class="text-rose-500 hover:text-rose-700 px-2 py-0.5 bg-rose-50 rounded text-[10px] font-bold flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
+                            </div>
                             
                             <div class="border-t border-slate-100 my-2"></div>
                             
                             <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1">Özel, Analitik & Diğer Gazlar</div>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Helyum (He) & Balon Gazı</a>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Gıda Gazları ve Ambalaj Karışımları</a>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Laboratuvar Gazları (Ultra Saflık)</a>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Emisyon Ölçüm Gazları (ppm/ppb)</a>
-                            <a href="#urunler" class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-[#3b66c4]">Sertifikalı Özel Gaz Karışımları</a>
+                            <div class="flex items-center justify-between px-3 py-1.5 rounded-lg hover:bg-blue-50 text-xs font-medium text-slate-700">
+                                <a href="#urunler" class="flex-1 hover:text-[#3b66c4]">Helyum (He) & Balon Gazı</a>
+                                <a href="msds/helyum.pdf" target="_blank" title="MSDS İndir" class="text-rose-500 hover:text-rose-700 px-2 py-0.5 bg-rose-50 rounded text-[10px] font-bold flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
+                            </div>
+                            <div class="flex items-center justify-between px-3 py-1.5 rounded-lg hover:bg-blue-50 text-xs font-medium text-slate-700">
+                                <a href="#urunler" class="flex-1 hover:text-[#3b66c4]">Gıda Gazları ve Ambalaj Karışımları</a>
+                                <a href="msds/gida-gazlari.pdf" target="_blank" title="MSDS İndir" class="text-rose-500 hover:text-rose-700 px-2 py-0.5 bg-rose-50 rounded text-[10px] font-bold flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
+                            </div>
+                            <div class="flex items-center justify-between px-3 py-1.5 rounded-lg hover:bg-blue-50 text-xs font-medium text-slate-700">
+                                <a href="#urunler" class="flex-1 hover:text-[#3b66c4]">Laboratuvar Gazları (Ultra Saflık)</a>
+                                <a href="msds/laboratuvar-gazlari.pdf" target="_blank" title="MSDS İndir" class="text-rose-500 hover:text-rose-700 px-2 py-0.5 bg-rose-50 rounded text-[10px] font-bold flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
+                            </div>
+                            <div class="flex items-center justify-between px-3 py-1.5 rounded-lg hover:bg-blue-50 text-xs font-medium text-slate-700">
+                                <a href="#urunler" class="flex-1 hover:text-[#3b66c4]">Emisyon Ölçüm Gazları (ppm/ppb)</a>
+                                <a href="msds/emisyon-gazlari.pdf" target="_blank" title="MSDS İndir" class="text-rose-500 hover:text-rose-700 px-2 py-0.5 bg-rose-50 rounded text-[10px] font-bold flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
+                            </div>
+                            <div class="flex items-center justify-between px-3 py-1.5 rounded-lg hover:bg-blue-50 text-xs font-medium text-slate-700">
+                                <a href="#urunler" class="flex-1 hover:text-[#3b66c4]">Sertifikalı Özel Gaz Karışımları</a>
+                                <a href="msds/ozel-gaz-karisimlari.pdf" target="_blank" title="MSDS İndir" class="text-rose-500 hover:text-rose-700 px-2 py-0.5 bg-rose-50 rounded text-[10px] font-bold flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
+                            </div>
                         </div>
                     </div>
 
@@ -238,7 +270,10 @@
                     <p class="text-slate-600 text-xs leading-relaxed mb-4">
                         Kaynak, plazma/lazer kesim ve metalurji uygulamalarında yüksek verim sağlayan oksijen gazı.
                     </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-blue-50 text-[11px] font-semibold text-[#3b66c4]">Endüstriyel</span>
+                    <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-200">
+                        <span class="inline-block px-2.5 py-1 rounded bg-blue-50 text-[11px] font-semibold text-[#3b66c4]">Endüstriyel</span>
+                        <a href="msds/oksijen.pdf" target="_blank" class="text-xs font-bold text-rose-600 hover:text-rose-800 flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
+                    </div>
                 </div>
 
                 <!-- Argon -->
@@ -250,7 +285,10 @@
                     <p class="text-slate-600 text-xs leading-relaxed mb-4">
                         TIG/MIG kaynak proseslerinde koruyucu asal gaz olarak mükemmel kaynak mukavemeti.
                     </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-cyan-50 text-[11px] font-semibold text-cyan-700">%99.999 Yüksek Saflık</span>
+                    <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-200">
+                        <span class="inline-block px-2.5 py-1 rounded bg-cyan-50 text-[11px] font-semibold text-cyan-700">%99.999 Yüksek Saflık</span>
+                        <a href="msds/argon.pdf" target="_blank" class="text-xs font-bold text-rose-600 hover:text-rose-800 flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
+                    </div>
                 </div>
 
                 <!-- Koruyucu Karışım Gazları -->
@@ -262,7 +300,10 @@
                     <p class="text-slate-600 text-xs leading-relaxed mb-4">
                        TIG/MIG kaynak proseslerinde koruyucu karışım gazları olarak mükemmel kaynak mukavemeti.
                     </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-cyan-50 text-[11px] font-semibold text-cyan-700">Endüstriyel</span>
+                    <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-200">
+                        <span class="inline-block px-2.5 py-1 rounded bg-cyan-50 text-[11px] font-semibold text-cyan-700">Endüstriyel</span>
+                        <a href="msds/koruyucu-karisim.pdf" target="_blank" class="text-xs font-bold text-rose-600 hover:text-rose-800 flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
+                    </div>
                 </div>
 
                 <!-- Azot -->
@@ -274,7 +315,10 @@
                     <p class="text-slate-600 text-xs leading-relaxed mb-4">
                         Lazer kesim, gıda paketleme, purge ve kimya uygulamaları için gaz & likit azot.
                     </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-indigo-50 text-[11px] font-semibold text-indigo-700">Gaz & Sıvı (Likit)</span>
+                    <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-200">
+                        <span class="inline-block px-2.5 py-1 rounded bg-indigo-50 text-[11px] font-semibold text-indigo-700">Gaz & Sıvı (Likit)</span>
+                        <a href="msds/azot-co2.pdf" target="_blank" class="text-xs font-bold text-rose-600 hover:text-rose-800 flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
+                    </div>
                 </div>
 
                 <!-- Karbondioksit -->
@@ -286,7 +330,10 @@
                     <p class="text-slate-600 text-xs leading-relaxed mb-4">
                         Gazaltı kaynakları, gıda ikram ve yangın söndürme sistemlerine uygun CO₂ tedariki.
                     </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-emerald-50 text-[11px] font-semibold text-emerald-700">Gıda & Sınai Tipi</span>
+                    <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-200">
+                        <span class="inline-block px-2.5 py-1 rounded bg-emerald-50 text-[11px] font-semibold text-emerald-700">Gıda & Sınai Tipi</span>
+                        <a href="msds/azot-co2.pdf" target="_blank" class="text-xs font-bold text-rose-600 hover:text-rose-800 flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
+                    </div>
                 </div>
 
                 <!-- Asetilen -->
@@ -298,7 +345,10 @@
                     <p class="text-slate-600 text-xs leading-relaxed mb-4">
                         Yüksek alev sıcaklığı gerektiren kaynak, kesme ve tavlama işleri için yanıcı gaz.
                     </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-rose-50 text-[11px] font-semibold text-rose-700">Emniyetli Dolum</span>
+                    <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-200">
+                        <span class="inline-block px-2.5 py-1 rounded bg-rose-50 text-[11px] font-semibold text-rose-700">Emniyetli Dolum</span>
+                        <a href="msds/asetilen.pdf" target="_blank" class="text-xs font-bold text-rose-600 hover:text-rose-800 flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
+                    </div>
                 </div>
 
                 <!-- Helyum -->
@@ -310,31 +360,10 @@
                     <p class="text-slate-600 text-xs leading-relaxed mb-4">
                         Kaçak testleri, hassas laboratuvar analizleri ve endüstriyel soğutma süreçleri.
                     </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-amber-50 text-[11px] font-semibold text-amber-700">Yüksek Saflık</span>
-                </div>
-
-                <!-- Balon Gazı -->
-                <div class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-[#3b66c4] hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-lightbulb"></i>
+                    <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-200">
+                        <span class="inline-block px-2.5 py-1 rounded bg-amber-50 text-[11px] font-semibold text-amber-700">Yüksek Saflık</span>
+                        <a href="msds/helyum.pdf" target="_blank" class="text-xs font-bold text-rose-600 hover:text-rose-800 flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
                     </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Balon Gazı</h4>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                        Doğum günü, nişan, düğün ve muhtelif parti organizasyonlarında balon uçurmak için helyum gazı.
-                    </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-amber-50 text-[11px] font-semibold text-amber-700">Eğlence</span>
-                </div>
-
-                <!-- Gıda Gazları -->
-                <div class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-[#3b66c4] hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-lightbulb"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Gıda Gazları</h4>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                       Gıda sektöründe ambalajlı ürünleri korumak ve raf ömür sürelerini uzatmak için gıda gazı ve karışımları.
-                    </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-amber-50 text-[11px] font-semibold text-amber-700">Özel Karışım</span>
                 </div>
 
                 <!-- Laboratuvar Gazları -->
@@ -344,33 +373,12 @@
                     </div>
                     <h4 class="text-lg font-bold text-slate-900 mb-2">Laboratuvar Gazları</h4>
                     <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                        Ar-Ge ve Analiz Laboratuvarlarında başta kromatografi, spektrometri ve diğer hassas ölçüm cihazları için ultra/yüksek hassasiyetli gaz ve özel karışım gazları.
+                        Ar-Ge ve Analiz Laboratuvarlarında kromatografi, spektrometri ve hassas cihazlar için gazlar.
                     </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-purple-50 text-[11px] font-semibold text-purple-700">Ultra/Yüksek Saflık</span>
-                </div>
-
-                <!-- Emisyon Gazları -->
-                <div class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-[#3b66c4] hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-flask"></i>
+                    <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-200">
+                        <span class="inline-block px-2.5 py-1 rounded bg-purple-50 text-[11px] font-semibold text-purple-700">Ultra Saflık</span>
+                        <a href="msds/laboratuvar-gazlari.pdf" target="_blank" class="text-xs font-bold text-rose-600 hover:text-rose-800 flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> MSDS</a>
                     </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Emisyon Gazları</h4>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                        Analiz cihazları için ppm/ppb hassasiyetli çok bileşenli özel gazlar.
-                    </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-purple-50 text-[11px] font-semibold text-purple-700">Ultra/Yüksek Saflık</span>
-                </div>
-
-                <!-- Özel Karışım Gazları -->
-                <div class="group bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-[#3b66c4] hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-[#3b66c4] flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-vial"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Özel Gaz Karışımları</h4>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                        Prosesinize özel oranlarda hazırlanan sertifikalı ve homojen gaz karışımları.
-                    </p>
-                    <span class="inline-block px-2.5 py-1 rounded bg-blue-50 text-[11px] font-semibold text-[#3b66c4]">Sertifikalı Karışım</span>
                 </div>
             </div>
         </div>
@@ -430,7 +438,7 @@
                         <h2 class="text-xs font-bold text-[#3b66c4] uppercase tracking-widest mb-2">İletişim Detayları</h2>
                         <h3 class="text-3xl font-extrabold text-slate-900 mb-4">Vargaz Gaz Çözümleri</h3>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Gaz siparişleriniz, teknik sorularınız ve fiyat teklifleriniz için merkezimizle iletişime geçebilirsiniz.
+                            Gaz siparişleriniz, teknik sorularınız, MSDS talepleriniz ve fiyat teklifleriniz için merkezimizle iletişime geçebilirsiniz.
                         </p>
                     </div>
 
@@ -454,71 +462,53 @@
                             <div class="text-xs font-bold uppercase text-slate-400">Web Sitemiz</div>
                             <div class="text-sm font-semibold text-slate-800">www.vargaz.com.tr</div>
                         </div>
-
-                        <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm h-48 bg-slate-200 relative mt-4">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195884.30043003027!2d32.62268153400587!3d39.90355569429482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d347d520732db1%3A0xbdc57b0c0842b8d!2sAnkara!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" class="w-full h-full border-0" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
                     </div>
                 </div>
 
-                <!-- Quote Form -->
-                <div id="teklif" class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-lg">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Hızlı Teklif & Sipariş Formu</h3>
-                    <p class="text-slate-600 text-sm mb-6">Formu doldurarak saniyeler içinde gaz talebinizi iletebilirsiniz.</p>
-
-                    <form id="contact-form" action="https://formspree.io/f/mvkkveyy" method="POST" class="space-y-4">
+                <!-- Quote / Contact Form -->
+                <div id="teklif" class="lg:col-span-7 bg-white p-8 rounded-3xl border border-slate-200 shadow-xl">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Hızlı Teklif & Bilgi Talep Formu</h3>
+                    <p class="text-slate-600 text-xs mb-6">İhtiyacınız olan gaz türü, saflık derecesi ve miktarını belirtin, en kısa sürede dönüş yapalım.</p>
+                    
+                    <form action="mailto:info@vargaz.com.tr" method="POST" enctype="text/plain" class="space-y-4">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
-                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Adınız Soyadınız *</label>
-                                <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#3b66c4] text-sm outline-none">
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Ad Soyad / Firma</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-[#3b66c4] text-sm bg-slate-50">
                             </div>
                             <div>
-                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Firma Ünvanı</label>
-                                <input type="text" name="company" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#3b66c4] text-sm outline-none">
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Telefon Numarası</label>
+                                <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-[#3b66c4] text-sm bg-slate-50">
                             </div>
                         </div>
-
+                        
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
-                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">E-posta Adresi *</label>
-                                <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#3b66c4] text-sm outline-none">
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">E-posta Adresi</label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-[#3b66c4] text-sm bg-slate-50">
                             </div>
                             <div>
-                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Telefon No *</label>
-                                <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#3b66c4] text-sm outline-none">
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">İlgilendiğiniz Ürün / Gaz</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-[#3b66c4] text-sm bg-slate-50">
+                                    <option>Argon (%99.999)</option>
+                                    <option>Oksijen / Azot</option>
+                                    <option>Emisyon / Laboratuvar Gazları</option>
+                                    <option>Gıda Gazları / Karışımlar</option>
+                                    <option>Helyum / Balon Gazı</option>
+                                    <option>Diğer Ürünler / Ekipmanlar</option>
+                                </select>
                             </div>
                         </div>
 
                         <div>
-                            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Talep Edilen Gaz Türü</label>
-                            <select name="gas_type" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#3b66c4] text-sm outline-none">
-                                <option>Yük.Saf. Oksijen Gazı (O₂)</option>
-                                <option>Yük.Saf. Argon Gazı (Ar)</option>
-                                <option>Yük.Saf. Azot/Nitrojen (N₂)</option>
-                                <option>Yük.Saf. Karbondioksit (CO₂)</option>
-                                <option>Yük.Saf. Asetilen (C₂H₂)</option>
-                                <option>Yük.Saf. Helyum Gaz/Sıvı (He)</option>
-                                <option>Balon Gazı (He)</option>
-                                <option>Laboratuvar Gazları</option>
-                                <option>Gıda Gazları</option>
-                                <option>Özel Karışım Gazlar</option>
-                                <option>Emisyon Gazları</option>
-                            </select>
+                            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Mesajınız / Talep Detayı</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-[#3b66c4] text-sm bg-slate-50" placeholder="Tüp adedi, saflık beklentisi veya teslimat adresi detayları..."></textarea>
                         </div>
 
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Mesajınız & Miktar Detayı *</label>
-                            <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#3b66c4] text-sm outline-none" placeholder="Tüp sayısı, gaz miktarı veya teknik sorularınız..."></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full py-4 px-6 rounded-xl font-bold text-white bg-[#3b66c4] hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/25">
+                        <button type="submit" class="w-full py-4 rounded-xl font-bold text-white bg-[#3b66c4] hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20">
                             Teklif Talebini Gönder
                         </button>
                     </form>
-
-                    <div id="form-feedback" class="hidden mt-4 p-4 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 text-sm font-medium text-center">
-                        <i class="fa-solid fa-circle-check mr-2"></i> Talebiniz başarıyla alındı. info@vargaz.com.tr adresi üzerinden en kısa sürede dönüş yapılacaktır.
-                    </div>
                 </div>
 
             </div>
@@ -527,9 +517,14 @@
 
     <!-- FOOTER -->
     <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between text-xs">
-            <p>&copy; 2026 VARGAZ Analiz Gazları ve Özel Gaz Çözümleri. Tüm hakları saklıdır.</p>
-            <p class="mt-4 md:mt-0">Tasarım & Altyapı: VARGAZ Dijital Ekibi</p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-center md:text-left">
+                <div class="text-white font-bold text-lg mb-1">VARGAZ Sanayi Gazları Ltd. Şti.</div>
+                <p class="text-xs text-slate-500">Endüstriyel, analitik ve özel gaz çözümlerinde güvenilir iş ortağınız.</p>
+            </div>
+            <div class="text-xs text-slate-500 text-center md:text-right">
+                &copy; 2026 VARGAZ. Tüm hakları saklıdır. Yenimahalle / Ankara
+            </div>
         </div>
     </footer>
 
